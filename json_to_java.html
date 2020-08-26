@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head> </head>
+<html>
+  <body>
+    <script>
+      function json_to_java() {
+        var txt = document.getElementById("json_id").value;
+        var obj = JSON.parse(txt);
+        var ans = "";
+        for (var key in obj) {
+          if (obj.hasOwnProperty(key)) {
+            ans += obj[key] + " ";
+          }
+        }
+        document.getElementById("output").innerHTML = ans;
+      }
+    </script>
+    <h1>Enter JSON in below text formate</h1>
+    <textarea id="json_id" name="json_name" rows="4" cols="50"></textarea>
+    <input type="button" value="Submit" onclick="json_to_java()" />
+    <br />
+    <h3 id="output">JAVA</h3>
+  </body>
+</html>
